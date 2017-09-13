@@ -6,4 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  testing = 'Tester';
+  isNotactive() {
+    if (this.testing === '') {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  clicker() {
+    this.testing = '';
+  }
 }
