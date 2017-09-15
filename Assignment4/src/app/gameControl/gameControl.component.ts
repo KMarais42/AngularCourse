@@ -2,7 +2,7 @@ import { Component , OnInit , Output , EventEmitter } from '@angular/core';
 
 @Component ( {
     selector: 'app-gameControl',
-    templateUrl: './odd.component.html' ,
+    templateUrl: './gameControl.component.html' ,
     styleUrls: ['./gameControl.component.css']
   }
 )

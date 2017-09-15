@@ -7,8 +7,8 @@ import { Component , OnInit, Input } from '@angular/core';
   }
 )
 
-export class EvenComponent implements OnInit{
-  @Input() num : number;
-  ngOnInit(){};
-  constructor(){};
+export class EvenComponent implements OnInit {
+  @Input() num;
+  ngOnInit() {};
+  constructor() {};
 }
