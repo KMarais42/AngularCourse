@@ -11,3 +11,10 @@
     </div>
   </div>
 </div>
+
+<button (click)="btnClicked()">Display details</button>
+<p *ngIf="displaybtn">'Secret Password = tuna'</p>
+
+<ol>
+  <li *ngFor="let myevent of myevents">{‌{myevent}}</li>
+</ol>
