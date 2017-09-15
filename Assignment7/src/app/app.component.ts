@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
-import { Observable } from "rxjs/Observable";
+import { Observable } from 'rxjs/Observable';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -27,20 +27,19 @@ export class AppComponent implements OnInit {
   onSubmit() {
     this.formValues = []
     this.formSubmitted = true;
-    for (let value in this.projectForm.value) {
-      this.formValues.push({label: value, value: this.projectForm.value[value]});
+    for (const value in Object.keys(this.projectForm.value)) {
+      this.formValues.push({label: value, value: this.projectForm.hasOwnProperty(value[value])});
     }
   }
   restrictedNames(control: FormControl): Promise<any> | Observable<any> {
     const promise = new Promise<any>((resolve, reject) => {
       setTimeout(() => {
         if (this.restrictedProjectNames.indexOf(control.value.trim()) >= 0) {
-          resolve({'restrictedName': true})
-        }
-        else {
+          resolve({'restrictedName': true});
+        } else {
           resolve(null);
         }
-      }, 1500)
+      }, 1500);
     });
     return promise;
   }
