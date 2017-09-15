@@ -15,3 +15,16 @@
     </div>
   </div>
 </div>
+<div class="row">
+  <div class="col-xs-12">
+    <app-gameControl (gameTicker)=onGameTickerTick($event)></app-gameControl>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <app-odd *ngFor="let oddNum of oddTicks" [num]="oddNum"></app-odd>
+    <app-even *ngFor="let evenNum of evenTicks" [num]="evenNum"></app-even>
+  </div>
+
+</div>
+
