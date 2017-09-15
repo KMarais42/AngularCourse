@@ -1,4 +1,4 @@
-import { UsersService } from './../shared/users.service';
+import { UsersService } from '../users.service';
 import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-active-users',
